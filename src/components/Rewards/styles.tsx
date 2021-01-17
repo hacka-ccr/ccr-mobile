@@ -145,10 +145,75 @@ export const ModalContainer = styled.View`
 	display: flex;
 	flex-direction: column;
 	background-color: white;
-	width: 300px;
+	width: 330px;
 	align-self: center;
-	height: 400px;
+	height: 430px;
 	border-radius: 12px;
 	justify-content: space-around;
 	align-items: center;
+`;
+
+export const ConfirmText = styled.Text`
+	font-size: 22px;
+	color: black;
+	margin-left: 7px;
+	font-weight: bold;
+`;
+
+export const RewardText = styled.Text`
+	font-size: 22px;
+	color: black;
+	margin-left: 7px;
+`;
+
+export const ValueWrapper = styled.View`
+	display: flex;
+	flex-direction: row;
+`;
+export const ButtonWrapper = styled.View`
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
+`;
+
+export const ConfirmButton = styled.TouchableOpacity`
+	width: 120px;
+	height: 30px;
+	background-color: rgba(200, 214, 49, 1);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border-radius: 12px;
+	padding: 25px;
+	align-self: center;
+	margin-bottom: 20px;
+`;
+export const CancelButton = styled.TouchableOpacity`
+	width: 120px;
+	height: 30px;
+	background-color: transparent;
+	border-color: black;
+	border-width: 1px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border-radius: 12px;
+	padding: 25px;
+	align-self: center;
+	margin-bottom: 20px;
+`;
+
+export const ConfirmBtnText = styled.Text`
+	color: white;
+	font-size: 17px;
+	text-align: center;
+`;
+
+export const CancelBtnText = styled.Text`
+	color: black;
+	font-size: 17px;
+	text-align: center;
 `;
