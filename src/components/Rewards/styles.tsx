@@ -66,3 +66,77 @@ export const Progress = styled.View`
 	height: 15px;
 	border-radius: 12px;
 `;
+
+export const RewardsContainer = styled.View`
+	display: flex;
+	flex-direction: column;
+	background-color: #dbdbdb;
+	height: 73%;
+`;
+
+export const RewardsTitle = styled.Text`
+	margin: 30px 0px 0px 25px;
+	font-size: 25px;
+	color: black;
+	font-weight: bold;
+`;
+
+export const ListItemContainer = styled.View`
+	background-color: #dbdbdb;
+	padding: 15px;
+	margin: 0px 25px 10px 25px;
+	border-width: 1px;
+	border-color: black;
+	border-radius: 12px;
+	display: flex;
+	flex-direction: row;
+	background-color: whitesmoke;
+`;
+
+export const ItemImg = styled.Image`
+	background-color: #437f5b;
+	width: 93px;
+	height: 93px;
+`;
+
+export const ItemTextContainer = styled.View`
+	display: flex;
+	flex-direction: column;
+	width: 220px;
+	/* background-color: red; */
+`;
+
+export const ItemTitle = styled.Text`
+	margin-left: 25px;
+	font-size: 22px;
+	color: black;
+	font-weight: bold;
+`;
+
+export const ItemDescription = styled.Text`
+	margin-left: 25px;
+	font-size: 16px;
+	color: black;
+`;
+
+export const CostContainer = styled.View`
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-top: 15px;
+	flex: 1;
+	height: 20px;
+	align-items: center;
+`;
+
+export const CostText = styled.Text`
+	font-size: 16px;
+	color: black;
+	margin-left: 7px;
+	font-weight: bold;
+`;
+
+export const ItemInfoContainer = styled.View`
+	display: flex;
+	flex-direction: column;
+`;
