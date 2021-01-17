@@ -47,12 +47,15 @@ import Coin from '../../../assets/coin.png';
 import ProfilePicture from '../../../assets/profile-pic.png';
 import Spotify3x from '../../../assets/spotify-3x.png';
 import Netflix from '../../../assets/netflix.png';
+import Confirmation from '../../../assets/confirmation.gif';
 
 export default function Rewards() {
 	const [modalVisible, setModalVisible] = useState(false);
 	const [title, setTitle] = useState('');
+	const [wallet, setWallet] = useState(1450);
 	const [value, setValue] = useState(0);
 	const [base64, setBase64] = useState('');
+	const [confirmed, setConfirmed] = useState(false);
 
 	const DATA = [
 		{
@@ -141,7 +144,7 @@ export default function Rewards() {
 				</TitleContainer>
 				<PointsContainer>
 					<Image source={Coin} style={{ width: 25, height: 25 }} />
-					<Points>1450 pts</Points>
+					<Points>{wallet} pts</Points>
 				</PointsContainer>
 				<ProgressBarContainer>
 					<Progress />
@@ -163,22 +166,42 @@ export default function Rewards() {
 				onBackdropPress={() => setModalVisible(false)}
 			>
 				<ModalContainer>
-					<ConfirmText>Deseja confirmar sua troca?</ConfirmText>
-					<RewardText>{title}</RewardText>
-					<Image source={{ uri: base64 }} style={{ width: 100, height: 100 }} />
-					<ValueWrapper>
-						<Image source={Coin} style={{ width: 20, height: 20 }} />
-						<Text style={{ fontSize: 18, marginLeft: 5 }}>{value} pts</Text>
-					</ValueWrapper>
+					{!confirmed ? (
+						<>
+							<ConfirmText>Deseja confirmar sua troca?</ConfirmText>
+							<RewardText>{title}</RewardText>
+							<Image
+								source={{ uri: base64 }}
+								style={{ width: 100, height: 100 }}
+							/>
+							<ValueWrapper>
+								<Image source={Coin} style={{ width: 20, height: 20 }} />
+								<Text style={{ fontSize: 18, marginLeft: 5 }}>{value} pts</Text>
+							</ValueWrapper>
+							<ButtonWrapper>
+								<CancelButton>
+									<CancelBtnText>Cancelar</CancelBtnText>
+								</CancelButton>
+								<ConfirmButton
+									onPress={() => {
+										setConfirmed(true);
+										setWallet((wallet) => wallet - value);
+									}}
+								>
+									<ConfirmBtnText>Confirmar</ConfirmBtnText>
+								</ConfirmButton>
+							</ButtonWrapper>
+						</>
+					) : (
+						<>
+							<ConfirmText>Troca confirmada!</ConfirmText>
 
-					<ButtonWrapper>
-						<CancelButton>
-							<CancelBtnText>Cancelar</CancelBtnText>
-						</CancelButton>
-						<ConfirmButton>
-							<ConfirmBtnText>Confirmar</ConfirmBtnText>
-						</ConfirmButton>
-					</ButtonWrapper>
+							<Image
+								source={Confirmation}
+								style={{ width: 200, height: 200 }}
+							/>
+						</>
+					)}
 				</ModalContainer>
 			</Modal>
 		</Container>
