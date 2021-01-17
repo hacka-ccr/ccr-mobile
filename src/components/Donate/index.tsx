@@ -10,8 +10,14 @@ import {
 	ExtraText,
 } from './styles';
 import YoungEarth from '../../../assets/young-earth.png';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Donate() {
+	const navigation = useNavigation();
+	const navigateToDonationForm = () => {
+		navigation.navigate('DonationForm');
+	};
+
 	return (
 		<Container>
 			<BannerContainer>
@@ -20,7 +26,7 @@ export default function Donate() {
 			</BannerContainer>
 
 			<Footer>
-				<DonateBtn>
+				<DonateBtn onPress={navigateToDonationForm}>
 					<DonateBtnText>Fazer uma doação</DonateBtnText>
 				</DonateBtn>
 				<ExtraText>Conheça os nossos centros de coleta</ExtraText>
