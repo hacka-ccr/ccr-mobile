@@ -11,11 +11,18 @@ import {
 } from './styles';
 import { Picker } from '@react-native-picker/picker';
 import { Feather } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+
 export default function index() {
 	const [name, setName] = useState('');
 	const [category, setCategory] = useState('Computadores');
 	const [year, setYear] = useState('2021');
 	const [description, setDescription] = useState('');
+
+	const navigation = useNavigation();
+	const navigateToCamera = () => {
+		navigation.navigate('DonationCamera');
+	};
 
 	return (
 		<Container>
@@ -92,7 +99,7 @@ export default function index() {
 				placeholder={'Insira aqui uma breve descrição sobre seu item...'}
 			></ThiccInput>
 
-			<CameraBtn>
+			<CameraBtn onPress={navigateToCamera}>
 				<Feather
 					name='camera'
 					size={50}
