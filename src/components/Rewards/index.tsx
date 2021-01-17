@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
 	SafeAreaView,
 	View,
@@ -38,6 +38,8 @@ import ProfilePicture from '../../../assets/profile-pic.png';
 import Spotify3x from '../../../assets/spotify-3x.png';
 
 export default function Rewards() {
+	const [modalVisible, setModalVisible] = useState(false);
+
 	const DATA = [
 		{
 			id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',

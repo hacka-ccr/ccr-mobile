@@ -81,7 +81,7 @@ export const RewardsTitle = styled.Text`
 	font-weight: bold;
 `;
 
-export const ListItemContainer = styled.View`
+export const ListItemContainer = styled.TouchableOpacity`
 	background-color: #dbdbdb;
 	padding: 15px;
 	margin: 0px 25px 10px 25px;
