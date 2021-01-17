@@ -8,6 +8,7 @@ import {
 	StatusBar,
 } from 'react-native';
 import { StyleSheet, Dimensions } from 'react-native';
+import Modal from 'react-native-modal';
 
 import {
 	Container,
@@ -29,6 +30,7 @@ import {
 	CostContainer,
 	ItemInfoContainer,
 	CostText,
+	ModalContainer,
 } from './styles';
 
 import Coin from '../../../assets/coin.png';
@@ -115,6 +117,14 @@ export default function Rewards() {
 					/>
 				</View>
 			</RewardsContainer>
+
+			<Modal isVisible={true}>
+				<ModalContainer>
+					<Text>I am the modal content!</Text>
+					<Text>I am the modal content!</Text>
+					<Text>I am the modal content!</Text>
+				</ModalContainer>
+			</Modal>
 		</Container>
 	);
 }

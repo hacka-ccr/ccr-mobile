@@ -140,3 +140,15 @@ export const ItemInfoContainer = styled.View`
 	display: flex;
 	flex-direction: column;
 `;
+
+export const ModalContainer = styled.View`
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	width: 300px;
+	align-self: center;
+	height: 400px;
+	border-radius: 12px;
+	justify-content: space-around;
+	align-items: center;
+`;
