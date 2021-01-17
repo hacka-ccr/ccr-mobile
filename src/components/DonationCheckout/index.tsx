@@ -21,19 +21,6 @@ export default function index() {
 				<Title>Obrigado por registrar seu item ;)</Title>
 				<Subtitle>Agora põe tudo na caixa que vamos fazer a coleta!</Subtitle>
 			</Wrapper>
-
-			{/* <LottieView
-				source={require('../../../assets/donate.json')}
-				autoPlay
-				loop
-				speed={2}
-				autoSize
-				resizeMode='cover'
-				style={{
-					width: '100%',
-					height: 500,
-				}}
-			/> */}
 			<ConfirmButton onPress={goBackHome}>
 				<ConfirmBtnText>Concluir</ConfirmBtnText>
 			</ConfirmButton>
