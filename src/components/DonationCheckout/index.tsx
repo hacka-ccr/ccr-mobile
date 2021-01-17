@@ -3,38 +3,40 @@ import {
 	Container,
 	Title,
 	Subtitle,
-	Input,
-	InputDesc,
-	ThiccInput,
-	CameraBtn,
-	CameraBtnText,
+	ConfirmButton,
+	ConfirmBtnText,
+	Wrapper,
 } from './styles';
-import { Picker } from '@react-native-picker/picker';
-import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 export default function index() {
 	const navigation = useNavigation();
-	const navigateToCamera = () => {
-		navigation.navigate('DonationCamera');
+	const goBackHome = () => {
+		navigation.navigate('Routes');
 	};
 
 	return (
 		<Container>
-			<Title>Obrigado por registrar seu item ;)</Title>
-			<Subtitle>Agora põe tudo na caixa que vamos fazer a coleta</Subtitle>
-			<InputDesc>Nome</InputDesc>
+			<Wrapper>
+				<Title>Obrigado por registrar seu item ;)</Title>
+				<Subtitle>Agora põe tudo na caixa que vamos fazer a coleta!</Subtitle>
+			</Wrapper>
 
-			<CameraBtn onPress={navigateToCamera}>
-				<Feather
-					name='camera'
-					size={50}
-					color='white'
-					style={{ alignSelf: 'center', marginTop: 30 }}
-				/>
-
-				<CameraBtnText>Agora tira uma foto bem legal pra gente!</CameraBtnText>
-			</CameraBtn>
+			{/* <LottieView
+				source={require('../../../assets/donate.json')}
+				autoPlay
+				loop
+				speed={2}
+				autoSize
+				resizeMode='cover'
+				style={{
+					width: '100%',
+					height: 500,
+				}}
+			/> */}
+			<ConfirmButton onPress={goBackHome}>
+				<ConfirmBtnText>Concluir</ConfirmBtnText>
+			</ConfirmButton>
 		</Container>
 	);
 }

@@ -8,7 +8,10 @@ export const Container = styled.View`
 	background-color: #275e4d;
 	padding-left: 40px;
 	padding-right: 40px;
+	justify-content: space-between;
 `;
+
+export const Wrapper = styled.View``;
 
 export const Title = styled.Text`
 	font-size: 35px;
@@ -64,4 +67,24 @@ export const CameraBtnText = styled.Text`
 	color: white;
 	text-align: center;
 	margin-top: 10px;
+`;
+
+export const ConfirmButton = styled.TouchableOpacity`
+	width: 200px;
+	height: 30px;
+	background-color: rgba(200, 214, 49, 0.486);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	border-radius: 12px;
+	padding: 25px;
+	align-self: center;
+	margin-bottom: 30px;
+`;
+
+export const ConfirmBtnText = styled.Text`
+	color: white;
+	font-size: 20px;
+	text-align: center;
 `;
