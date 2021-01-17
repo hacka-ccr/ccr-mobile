@@ -118,7 +118,7 @@ export default function Rewards() {
 				</View>
 			</RewardsContainer>
 
-			<Modal isVisible={true}>
+			<Modal isVisible={false}>
 				<ModalContainer>
 					<Text>I am the modal content!</Text>
 					<Text>I am the modal content!</Text>
