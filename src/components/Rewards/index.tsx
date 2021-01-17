@@ -39,6 +39,8 @@ import Spotify3x from '../../../assets/spotify-3x.png';
 
 export default function Rewards() {
 	const [modalVisible, setModalVisible] = useState(false);
+	const [title, setTitle] = useState('');
+	const [value, setValue] = useState('');
 
 	const DATA = [
 		{
@@ -75,8 +77,17 @@ export default function Rewards() {
 		},
 	];
 
-	const Item = ({ title, description }: any) => (
-		<ListItemContainer>
+	const Item = ({ title, description, id }: any) => (
+		<ListItemContainer
+			onPress={() => {
+				let elem = DATA.filter((el) => {
+					return el.id === id;
+				});
+
+				setTitle(elem[0].title);
+				setModalVisible(true);
+			}}
+		>
 			<ItemImg source={Spotify3x} />
 			<ItemInfoContainer>
 				<ItemTextContainer>
@@ -91,7 +102,7 @@ export default function Rewards() {
 		</ListItemContainer>
 	);
 	const renderItem = ({ item }: any) => (
-		<Item title={item.title} description={item.description} />
+		<Item title={item.title} description={item.description} id={item.id} />
 	);
 
 	return (
@@ -120,9 +131,12 @@ export default function Rewards() {
 				</View>
 			</RewardsContainer>
 
-			<Modal isVisible={false}>
+			<Modal
+				isVisible={modalVisible}
+				onBackdropPress={() => setModalVisible(false)}
+			>
 				<ModalContainer>
-					<Text>I am the modal content!</Text>
+					<Text>{title}</Text>
 					<Text>I am the modal content!</Text>
 					<Text>I am the modal content!</Text>
 				</ModalContainer>
