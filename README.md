@@ -82,8 +82,6 @@ Isso dará início ao projeto no endereço `localhost:3000`
 
    <!-- USAGE EXAMPLES -->
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
 <!-- LICENSE -->
 
 ## License
