@@ -3,6 +3,7 @@
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="assets/logo_ccr.png" alt="Logo" width=100>
+    
   </a>
 
   <h2 align="center">Hackathon CCR 2ª Edição</h2>
@@ -11,6 +12,10 @@
 <!-- ABOUT THE PROJECT -->
 
 ## Sobre o projeto
+
+<img src="assets/RegisterScreen.png" alt="Logo" width=150>
+<img src="assets/RewardsScreen.png" alt="Logo" width=150>
+<img src="assets/confirmed.gif" alt="Logo" width=160>
 
 Anualmente o Brasil produz mais de 2 milhões de toneladas de lixo eletrônico e, dessa quantidade, apenas cerca de 3% é reciclado. Mas apesar da quantia exorbitante de eletrônicos descartados, o país tem uma distribuição desigual de equipamentos digitais: para cada 10 habitantes há 16 celulares, tablets ou notebooks e, ainda assim, 46 milhões de cidadãos brasileiros são excluídos digitalmente.
 Dentre as consequências dessa exclusão está o desempenho menor de candidatos no ENEM que não têm acesso à Internet nem computador. Os dados do Inep mostram que em 2018 quase metade dos candidatos no Brasil não tinham computador e suas notas foram menores do que as daqueles que tinham maior acesso à tecnologia.
