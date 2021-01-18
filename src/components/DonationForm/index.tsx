@@ -12,6 +12,7 @@ import {
 import { Picker } from '@react-native-picker/picker';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { View } from 'react-native';
 
 export default function index() {
 	const [name, setName] = useState('');
@@ -89,7 +90,7 @@ export default function index() {
 				<Picker.Item label='2009' value='2009' />
 			</Picker>
 
-			<InputDesc>Descrição</InputDesc>
+			{/* <InputDesc>Descrição</InputDesc>
 			<ThiccInput
 				style={{ paddingHorizontal: 15 }}
 				multiline={true}
@@ -97,18 +98,30 @@ export default function index() {
 				defaultValue={description}
 				onChangeText={(text) => setDescription(text as any)}
 				placeholder={'Insira aqui uma breve descrição sobre seu item...'}
-			></ThiccInput>
+			></ThiccInput> */}
 
-			<CameraBtn onPress={navigateToCamera}>
-				<Feather
-					name='camera'
-					size={50}
-					color='white'
-					style={{ alignSelf: 'center', marginTop: 30 }}
-				/>
+			<View
+				style={{
+					display: 'flex',
+					justifyContent: 'center',
+					alignSelf: 'center',
+					alignItems: 'flex-end',
+					flex: 1,
+				}}
+			>
+				<CameraBtn onPress={navigateToCamera}>
+					<Feather
+						name='camera'
+						size={50}
+						color='white'
+						style={{ alignSelf: 'center', marginTop: 30 }}
+					/>
 
-				<CameraBtnText>Agora tira uma foto bem legal pra gente!</CameraBtnText>
-			</CameraBtn>
+					<CameraBtnText>
+						Agora tira uma foto bem legal pra gente!
+					</CameraBtnText>
+				</CameraBtn>
+			</View>
 		</Container>
 	);
 }
